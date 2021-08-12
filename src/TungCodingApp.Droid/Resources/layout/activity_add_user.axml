@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="25dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+     <TextView   
+            android:textSize="22dp"  
+            android:background="@color/primaryColor"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:textAlignment="gravity"
+            android:gravity="center"
+            app:MvxBind="Text Title" />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/text_margin"
+		android:autoSizeTextType="uniform"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:hint="Name"
+		app:MvxBind="Text Name" />
+	<TextView  
+        android:layout_marginLeft="20dp"  
+        android:textColor="@color/dangerTextColor"
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        app:MvxBind="Text NameMessage" /> 
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/text_margin"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:hint="Password"
+		app:MvxBind="Text Password" /> 
+    <TextView  
+        android:layout_marginLeft="20dp"  
+        android:textColor="@color/dangerTextColor"
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        app:MvxBind="Text PasswordMessage" />  
+	<LinearLayout
+	android:layout_marginTop="40dp"	
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+      app:MvxBind="Click CancelCommand"
+      android:text="Cancel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="5dp"/>
+    <Button
+      app:MvxBind="Click SaveCommand"
+      android:text="Save"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="5dp"/>
+  </LinearLayout>
+ </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

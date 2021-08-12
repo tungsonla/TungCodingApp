@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView   
+            android:textSize="25dp"  
+            android:background="@color/primaryColor"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content" 
+            android:textAlignment="gravity"
+            android:gravity="center"
+            local:MvxBind="Text Title" />
+        <Mvx.MvxListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            local:MvxItemTemplate="@layout/item_template"
+            local:MvxBind="ItemsSource UsersCollection"
+            />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        local:srcCompat="@drawable/ic_add_white_24dp" 
+        local:MvxBind="Click AddUser"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
